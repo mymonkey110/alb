@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<application>
+    <clusters>
+        <cluster name="local">
+            <server>172.16.33.11</server>
+            <server>172.16.33.12</server>
+            <server>172.16.33.13</server>
+        </cluster>
+    </clusters>
+
+    <communication>
+        <timespan>30</timespan>
+    </communication>
+
+    <process>
+        <name>kvm</name>
+    </process>
+
+    <threshold>
+        <maxCpuUsage>80</maxCpuUsage>
+        <maxMemoryUsage>80</maxMemoryUsage>
+        <maxMemoryUsed>4096</maxMemoryUsed>
+        <minMemoryFree>1024</minMemoryFree>
+    </threshold>
+
+    <unit>
+        <cpu>0.1</cpu>
+        <memory>0.28</memory>
+    </unit>
+
+    <log>
+        <configuration>logback.xml</configuration>
+    </log>
+
+    <monitor>
+        <timespan>30</timespan>
+        <csvpath>d:/monitor.csv</csvpath>
+        <append>true</append>
+    </monitor>
+</application>
